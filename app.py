@@ -58,4 +58,5 @@ data = SearchRecentTweets("#Tesla", timedelta(days=2))
 data = CleanTweets(data)
 df = pandas.DataFrame.from_records(data)
 
-print(df)
+df.to_csv("./data.csv")
+w

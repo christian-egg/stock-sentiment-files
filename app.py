@@ -4,15 +4,15 @@ from datetime import timezone
 import tweepy
 import pandas
 import re
+from dotenv import load_dotenv
 
+load_dotenv()
 
-
-
-API_KEY = "sVXiQKBJP7PnZTlihbigp70pK"
-TOKEN_SECRET = "5mBqfX43Utio4rocfLt5oZiOI3WkZE7oEyuKoiQcHJpnNTKCFh"
-ACCESS_TOKEN = "1506026300527546368-g8IHal1UhJwpS2q3pvF5lub3Yt70cA"
-ACCESS_TOKEN_SECRET = "KaVduS3estbEIGBYEmvIvght3HZDKMpG39eKFSYvZlz24"
-BEARER_TOKEN = "AAAAAAAAAAAAAAAAAAAAAIfyaQEAAAAAPlui3vZivPBWFSTuhwt%2F2ROsEdA%3DaxTAohTu5pw7exnBjKgpasnvPxjADUZuDI17Bd4dbA2QSEYK3S"
+API_KEY = os.getenv('API_KEY')
+TOKEN_SECRET = os.getenv('TOKEN_SECRET')
+ACCESS_TOKEN = os.getenv('ACCESS_TOKEN')
+ACCESS_TOKEN_SECRET = os.getenv('ACCESS_TOKEN_SECRET')
+BEARER_TOKEN = os.getenv('BEARER_TOKEN')
 
 client = tweepy.Client(bearer_token=BEARER_TOKEN)
 
